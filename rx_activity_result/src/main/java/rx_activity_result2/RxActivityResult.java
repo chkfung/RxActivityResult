@@ -28,9 +28,9 @@ import androidx.fragment.app.FragmentManager;
 
 import java.util.List;
 
-import io.reactivex.Observable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.subjects.PublishSubject;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Consumer;
+import io.reactivex.rxjava3.subjects.PublishSubject;
 
 
 public final class RxActivityResult {
@@ -52,9 +52,9 @@ public final class RxActivityResult {
     }
 
     public static class Builder<T> {
-        final Class clazz;
-        final PublishSubject<Result<T>> subject = PublishSubject.create();
-        private final boolean uiTargetActivity;
+        final         Class                     clazz;
+        final         PublishSubject<Result<T>> subject = PublishSubject.create();
+        private final boolean                   uiTargetActivity;
 
         public Builder(T t) {
             if (activitiesLifecycle == null) {
